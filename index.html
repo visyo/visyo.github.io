@@ -1,4 +1,4 @@
-      <!DOCTYPE html>
+    <!DOCTYPE html>
       <html lang="en">
       <head>
         <!--  Scripts-->
@@ -43,10 +43,10 @@
           <div class="nav-wrapper container">
             <a id="logo-container" class="brand-logo"><img style="width:62px; height:62px" src="images/logo.png"></a>
             <ul class="right hide-on-med-and-down">
-              <li><a id="features-item" class="cyan-text" target="#features">Features</a></li>
-              <li><a id="pricing-item" class="cyan-text" target="#pricing">Pricing</a></li>
-              <li><a id="our-team-item" class="cyan-text" target="#our-team">Our Team</a></li>
-              <li><a id="contact-us-item" class="cyan-text" target="#contact-us">Contact Us</a></li>
+              <li><a id="features-item" class="cyan-text" href="#features">Features</a></li>
+              <li><a id="pricing-item" class="cyan-text" href="#pricing">Pricing</a></li>
+              <li><a id="our-team-item" class="cyan-text" href="#our-team">Our Team</a></li>
+              <li><a id="contact-us-item" class="cyan-text" href="#contact-us">Contact Us</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
@@ -133,74 +133,107 @@
                 <h4 class="white-text">Our Team</h4>
                 <p class="left-align light cyan-text">Meet the visyonaires that are the soul of our startup and are working hardly and lovely to bring you more powerful and accurate products.</p>
                 
-                <div class="row">
+                <div id="team-cards" class="row">
+                  <script>
+                      (function($) {
+    $.fn.fadeImages = function(repeatTime, timeBetweenBoxes, boxExistanceTime) {
+        var images = this.children('div').hide();
+        runFade = function() {
+            images.each(function(i) {
+                var image = this;
+                window.setTimeout(function() { $(image).fadeIn();  }, i * timeBetweenBoxes);
+                window.setTimeout(function() { $(image).fadeOut(); }, i * timeBetweenBoxes + boxExistanceTime);
+            });
+        };
+        window.setInterval(runFade, repeatTime);
+        runFade();
+        return this;
+    };
+})(jQuery);
+                  </script>
+                    
                   <div class="col l4 s14 m7">
-             
-                    <div class="card small">
+                    <div id="card1" class="card small green">
                       <div class="card-image">
                         <img src="images/team/ramon.jpg">
                         <span class="card-title">Ramon Rabello</span>
-                    </div>
-                    <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                        <a class="waves-effect waves-light blue-text" href="#"><i class="material-icons left blue-text">link</i>About Ramon</a>
+                      </div>
+                      <div class="card-content white-text">
+                        <p>CEO</p>
+                      </div>
+                      <div class="card-action">
+                        <a class="waves-effect waves-light white-text" href="#"><i class="material-icons left white-text">link</i>About Ramon</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <div class="col l4 s12 m7">
-                <div class="card small">
+                    
+                    <div class="col l4 s14 m7">
+                    <div id="card2" class="card small pink lighten-2">
+                      <div class="card-image">
+                        <img src="images/team/fernanda.png">
+                        <span class="card-title">Fernanda Rabello</span>
+                      </div>
+                      <div class="card-content white-text">
+                        <p>Business Analyst</p>
+                      </div>
+                      <div class="card-action">
+                        <a class="waves-effect waves-light white-text" href="#"><i class="material-icons left white-text">link</i>About Fernanda</a>
+                      </div>
+                    </div>
+                  </div>
+                    
+                    <div class="col l4 s12 m7">
+                <div id="card3" class="card small blue">
                   <div class="card-image">
                     <img src="images/team/bryan.jpg">
                     <span class="card-title">Bryan Ollivie</span>
                   </div>
-                  <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
+                  <div class="card-content white-text">
+                    <p>Android Developer</p>
                   </div>
                   <div class="card-action">
-                    <a class="waves-effect waves-light blue-text" href="#"><i class="material-icons left blue-text">link</i>About Bryan</a>
+                    <a class="waves-effect waves-light white-text" href="#"><i class="material-icons left white-text">link</i>About Bryan</a>
                   </div>
                 </div>
               </div>
-
-               <div class="col l4 s12 m7">
-                <div class="card small">
+                  </div>
+                  <div class="row">
+                  
+                    
+                    <div class="col l4 s12 m7">
+                <div id="card4" class="card small purple">
                   <div class="card-image">
                     <img src="images/team/milton.jpg">
                     <span class="card-title">Milton Alcântara</span>
                   </div>
-                  <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
+                  <div class="card-content white-text">
+                    <p>UX Designer</p>
                   </div>
                   <div class="card-action">
-                    <a class="waves-effect waves-light blue-text" href="#"><i class="material-icons left blue-text">link</i>About Milton</a>
+                    <a class="waves-effect waves-light white-text" href="#"><i class="material-icons left white-text">link</i>About Milton</a>
                   </div>
                 </div>
                 </div>
-
-                <div class="col l4 s12 m7">
-                  <div class="card small">
+                      
+                      <div class="col l4 s12 m7">
+                  <div id="card5" class="card small orange lighten-1">
                     <div class="card-image">
                       <img src="images/team/larissa.png">
                       <span class="card-title">Larissa Guimarães</span>
                     </div>
-                    <div class="card-content">
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                    <div class="card-content white-text">
+                      <p>Android Developer</p>
                     </div>
                     <div class="card-action">
-                      <a class="waves-effect waves-light blue-text" href="#"><i class="material-icons left blue-text">link</i>About Larissa</a>
+                      <a class="waves-effect waves-light white-text" href="#"><i class="material-icons left white-text">link</i>About Larissa</a>
                     </div>
                   </div>
               </div>
-                 
+            </div>     
+                </div>             
         </div>
+            </div>
+          </div>
 
         <div class="parallax-container valign-wrapper">
           <div class="section no-pad-bot">
@@ -218,30 +251,33 @@
 
             <div class="row">
               
-              <div class="col s12 center">
+              <div id="contact-us" class="col s12 center">
                 <h3><i class="mdi-content-send"></i></h3>
                 <h4 class="white-text">Contact Us</h4>
                 <p class="left-align light cyan-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
             
-                <form>  
+                
+                  <div class="section">
+                  <form>  
                   <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field row">
                       <input id="name" type="text" class="validate">
                       <label for="name">Your Name</label>
                     </div>
                   </div>
 
                   <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field row">
                       <input id="email" type="text" class="validate">
                       <label for="email">Your E-mail</label>
                     </div>
                   </div>
 
                   <div class="row">
-                      <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light cyan center">Submit</a>
+                      <a href="http://materializecss.com/getting-started.html" id="send-button" class="btn-large waves-effect waves-light cyan center">Submit</a>
                   </div>
                 </form>
+                  </div>
 
               </div>
             </div>
